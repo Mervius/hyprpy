@@ -458,7 +458,6 @@ class InstanceSignalCollection:
         #:       ``screencast_type``    :class:`str`  ``"MONITOR"`` if the screencast was enabled for a monitor, and ``"WINDOW"`` if it was enabled for a window
         #:       ====================== ============= ==========================================================================================================
         self.screencast: Signal = Signal(self)
-
         
         #: Emits the following Signal Data when the screencopy state of a client changes:
         #:
