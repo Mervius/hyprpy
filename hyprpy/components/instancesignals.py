@@ -818,7 +818,7 @@ class InstanceSignalCollection:
                 screencast_type = "WINDOW"
             case "region":
                 screencast_type = "REGION"
-            cast _:
+            case _:
                 screencast_type = "NONE"
         return {
             "screencast_enabled": bool(int(screencast_enabled)),
