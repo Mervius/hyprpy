@@ -810,7 +810,16 @@ class InstanceSignalCollection:
         }
     def _parse_screencastv2(self, data: str) -> dict:
         print(data)
-        screencast_enabled, screencast_type, screencast_name = data.split(",")
+        screencast_enabled, _screencast_type_internal, screencast_name = data.split(",")
+        match _screencast_type_internal:
+            case "monitor:
+                screencast_type = "MONITOR
+            case "window:
+                screencast_type = "WINDOW"
+            case "region:
+                screencast_type = "REGION"
+            cast _:
+                screencast_type = "NONE"
         return {
             "screencast_enabled": bool(int(screencast_enabled)),
             "screencast_type": screencast_type,
