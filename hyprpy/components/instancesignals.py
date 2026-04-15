@@ -812,11 +812,11 @@ class InstanceSignalCollection:
         print(data)
         screencast_enabled, _screencast_type_internal, screencast_name = data.split(",")
         match _screencast_type_internal:
-            case "monitor:
+            case "monitor":
                 screencast_type = "MONITOR
-            case "window:
+            case "window":
                 screencast_type = "WINDOW"
-            case "region:
+            case "region":
                 screencast_type = "REGION"
             cast _:
                 screencast_type = "NONE"
