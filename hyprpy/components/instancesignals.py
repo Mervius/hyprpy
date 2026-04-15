@@ -465,13 +465,13 @@ class InstanceSignalCollection:
         #:       :widths: auto
         #:       :align: left
         #:
-        #:       ====================== ============= ========================================================================================================================================================
+        #:       ====================== ============= ================================================================================================================================================================
         #:       Name                   Type          Description
-        #:       ====================== ============= ========================================================================================================================================================
+        #:       ====================== ============= ================================================================================================================================================================
         #:       ``screencast_enabled`` :class:`bool` ``True`` if the screencast was enabled, and ``False`` if it was disabled
-        #:       ``screencast_type``    :class:`str`  ``"MONITOR"`` if the screencast was enabled for a monitor, and ``"WINDOW"`` if it was enabled for a window, or "REGION" if it was enabled for a region
+        #:       ``screencast_type``    :class:`str`  ``"MONITOR"`` if the screencast was enabled for a monitor, and ``"WINDOW"`` if it was enabled for a window, "REGION" if it was enabled for a region, or "NONE"
         #        ``screencast_name``    :class:`str`  Name of the monitor if screencast was enabled for a monitor or name of window if it was enabled for a window
-        #:       ====================== ============= ========================================================================================================================================================
+        #:       ====================== ============= ================================================================================================================================================================
         self.screencastv2: Signal = Signal(self)
 
         #: Emits the following Signal Data when a keybind submap changes:
